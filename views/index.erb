@@ -1,0 +1,20 @@
+<h3>Songs</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Song</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td><a href=<%= "/songs/#{URI.encode(song[:title])}" %>><%= song[:title] %></a></td>
+        <td><%= song[:position] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
